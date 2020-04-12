@@ -1,0 +1,9 @@
+#TODO: this
+(a) 
+An SQL injection would allow a user direct access to the DB. Given this, they could find out the corresponding table structure (via metadata tables .tables) and alter the cite in the following ways: 
+  * Dump the database, losing all data about the users (We all know social media companies like Facebook just want consumer data).
+  * Impersonate other users, posting at will whatever they want.  
+
+A blind SQL injection is when a user cannot directly insert SQl queries to the database but has means to query the database in a way configurable by an attacker. For example, query parameter in a GET request often get passed straight to a SQL query (in The Flubbook, a post's ID may directly get added to the SQL statement). One can then alter these values in an attempt to inject the database. 
+
+Client side mediation is not enough to protect against malicious inputs. A user could bypass the client's input sanitation by directly interacting with the backend itself. 
